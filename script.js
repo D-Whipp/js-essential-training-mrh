@@ -1,15 +1,16 @@
-const Book = {
-  name: 'Take back your life',
-  author: 'Levi Lusko',
-  length: 275,
-  isOpen: false,
-  currentPage: 1,
-  toggleOpen: function (openStatus) {
-    this.isOpen = openStatus;
-  },
-};
+import Backpack from './Backpack.js';
 
-console.log(Book);
-console.log(Book.author);
-console.log(Book.name);
-console.log(Book.currentPage);
+const everydayPack = new Backpack(
+  'Everyday Backpack',
+  30,
+  'grey',
+  15,
+  26,
+  26,
+  false,
+  'December 5, 2018 15:00:00 PST'
+);
+
+console.log('The everydayPack object:', everydayPack);
+console.log('Date acquired:', everydayPack.dateAcquired);
+console.log('Days since acquired: ', everydayPack.backpackAge());
